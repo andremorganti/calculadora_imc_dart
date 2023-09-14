@@ -1,7 +1,6 @@
 import 'dart:io';
-import 'dart:math';
 
-import 'package:calculadora_imc/calculadora_imc.dart' as calculadora_imc;
+import 'package:calculadora_imc/calculadora_imc.dart' as utils;
 
 void main(List<String> arguments) {
   print("Entre com o seu nome:");
@@ -18,7 +17,8 @@ void main(List<String> arguments) {
 
   double imc = 0.0;
 
-  imc = double.parse(peso.toString()) / pow(double.parse(altura.toString()), 2);
+  imc = utils.calculaIMC(
+      double.parse(peso.toString()), double.parse(altura.toString()));
 
   print("Seu IMC é de: $imc");
 }
