@@ -25,13 +25,14 @@ void main(List<String> arguments) {
   print("=====================================================");
 
   print("");
-  print("O seu IMC é:");
 
   Pessoa pessoa = Pessoa(nome, peso, altura);
 
-  print("$nome, $peso, $altura");
-  print("Nome: ${pessoa.getNome()}");
-
   double imc = pessoa.calculaIMC();
   print("O IMC é de: $imc");
+  print("");
+
+  String imcqualificado = pessoa.qualificaIMC(imc);
+  print("Seu IMC está qualificado como: $imcqualificado");
+  print("=====================================================");
 }
