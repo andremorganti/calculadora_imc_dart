@@ -37,6 +37,9 @@ class Pessoa {
   }
 
   double calculaIMC() {
+    if (_altura <= 0.0 || _peso <= 0.0) {
+      throw ArgumentError("O valor não pode ser menor ou igual a 0");
+    }
     return _peso / pow((_altura / 100), 2);
   }
 

@@ -13,9 +13,14 @@ class Utils {
       print(texto);
       valor_entrada = lerString();
       try {
-        return double.parse(valor_entrada);
+        double valorEntradaDouble = double.parse(valor_entrada);
+        if (valorEntradaDouble <= 0.0) {
+          print("O valor não pode ser menor ou igual a 0");
+        } else {
+          return valorEntradaDouble;
+        }
       } catch (e) {
-        print("Valor inválido para peso! Digite algo como $dica");
+        print("Valor inválido! Digite algo como $dica");
       }
     }
   }
