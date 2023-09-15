@@ -42,16 +42,17 @@ class Pessoa {
 
   String qualificaIMC(double imc) {
     Map<double, String> tabelaIMC = {
-      18.5: 'Baixo Peso',
-      24.99: 'Peso Normal',
-      29.99: 'Sobrepeso',
-      34.99: 'Obesidade Grau I',
-      39.99: 'Obesidade Grau II',
-      40: 'Obesidade Grau III'
+      16: 'Magreza grave',
+      17: 'Magreza Moderada',
+      18.5: 'Magreza Leve',
+      25: 'Saudável',
+      30: 'Sobrepeso',
+      35: 'Obesidade Grau I',
+      40: 'Obesidade Grau II',
+      50: 'Obesidade Grau III'
     };
 
-    String imcQualificado = "impossível calcular";
-
+    String imcQualificado = 'Obesidade Grau III';
     for (var key in tabelaIMC.keys) {
       if (imc <= key) {
         imcQualificado = tabelaIMC[key].toString();

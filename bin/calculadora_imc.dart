@@ -29,7 +29,9 @@ void main(List<String> arguments) {
   Pessoa pessoa = Pessoa(nome, peso, altura);
 
   double imc = pessoa.calculaIMC();
-  print("O IMC é de: $imc");
+
+  String imcFormatado = Utils.formatarImc(imc);
+  print("O IMC é de: $imcFormatado");
   print("");
 
   String imcqualificado = pessoa.qualificaIMC(imc);
